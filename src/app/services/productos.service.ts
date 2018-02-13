@@ -15,6 +15,11 @@ cargando:boolean = true;
 
     }
 
+    public cargar_producto(cod:string){
+        return this.http.get(`https://paginaweb-afe52.firebaseio.com/productos/${ cod }.json`);
+
+    }
+
     public cargar_productos(){
 
           this.cargando = true;
@@ -31,3 +36,6 @@ cargando:boolean = true;
 
               });
    }
+
+
+ }
